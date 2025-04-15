@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Sushi</title>
+    <link rel="stylesheet" href="./CSS/stylePe.css"> <!-- Enlaza el archivo CSS -->
+</head>
+<body>
+    <div class="container">
+        <h1>¡Haz tu pedido de sushi!</h1>
+
+        <!-- Formulario de pedido de sushi -->
+        <h2>Sushi</h2>
+        <div id="sushiOptions">
+            <label><input type="checkbox" value="nigiri" class="sushi"> Nigiri - $5.00</label>
+            <input type="number" class="cantidadSushi" min="1" placeholder="Cantidad">
+            <br>
+            <label><input type="checkbox" value="sashimi" class="sushi"> Sashimi - $6.00</label>
+            <input type="number" class="cantidadSushi" min="1" placeholder="Cantidad">
+            <br>
+            <label><input type="checkbox" value="maki" class="sushi"> Maki - $4.50</label>
+            <input type="number" class="cantidadSushi" min="1" placeholder="Cantidad">
+            <br>
+            <label><input type="checkbox" value="uramaki" class="sushi"> Uramaki - $5.50</label>
+            <input type="number" class="cantidadSushi" min="1" placeholder="Cantidad">
+            <br>
+            <label><input type="checkbox" value="temaki" class="sushi"> Temaki - $7.00</label>
+            <input type="number" class="cantidadSushi" min="1" placeholder="Cantidad">
+        </div>
+
+        <!-- Notas adicionales -->
+        <h2>Notas adicionales:</h2>
+        <textarea id="notas" rows="4" placeholder="Ej: Sin gluten, sin picante..."></textarea>
+
+        <!-- Selección de bebidas -->
+        <h2>Bebidas</h2>
+        <div id="bebidaOptions">
+            <label><input type="checkbox" value="agua" class="bebida"> Agua - $1.00</label>
+            <input type="number" class="cantidadBebida" min="1" placeholder="Cantidad">
+            <br>
+            <label><input type="checkbox" value="refresco" class="bebida"> Refresco - $2.00</label>
+            <input type="number" class="cantidadBebida" min="1" placeholder="Cantidad">
+            <br>
+            <label><input type="checkbox" value="cerveza" class="bebida"> Cerveza - $3.50</label>
+            <input type="number" class="cantidadBebida" min="1" placeholder="Cantidad">
+            <br>
+            <label><input type="checkbox" value="te" class="bebida"> Té - $1.50</label>
+            <input type="number" class="cantidadBebida" min="1" placeholder="Cantidad">
+        </div>
+
+        <!-- Extras -->
+        <h2>Extras</h2>
+        <label>Salsa Siracha - $0.50</label>
+        <input type="number" class="extra" id="siracha" min="0" placeholder="Cantidad">
+        <br>
+        <label>Ranch - $0.75</label>
+        <input type="number" class="extra" id="ranch" min="0" placeholder="Cantidad">
+        <br>
+        <label>Salsa de Soya - $0.25</label>
+        <input type="number" class="extra" id="soya" min="0" placeholder="Cantidad">
+
+        <!-- Método de pago -->
+        <h2>Método de Pago</h2>
+        <select id="metodoPago">
+            <option value="">Selecciona una opción</option>
+            <option value="efectivo">Pago en Efectivo</option>
+            <option value="transferencia">Transferencia Bancaria</option>
+        </select>
+
+        <div id="efectivoInfo" style="display: none;">
+            <label>¿Necesita cambio?</label>
+            <select id="cambio">
+                <option value="exacto">Monto exacto</option>
+                <option value="feria">Necesito cambio</option>
+            </select>
+            <div id="montoCambio" style="display: none;">
+                <label>¿Con cuánto pagará?</label>
+                <input type="number" id="cantidadPago" min="1">
+            </div>
+        </div>
+
+        <div id="transferenciaInfo" style="display: none;">
+            <p>Realiza la transferencia a la cuenta 1234 5678 9012 3456 (SushiBank)</p>
+        </div>
+        <section>
+            <h2>Carrito de Compras</h2>
+            <div class="carrito">
+                <ul id="carrito"></ul>
+                <button id="verCarritoBtn">Ver Carrito</button>
+                <div id="modalCarrito" class="modal">
+                    <div class="modal-contenido">
+                        <span class="cerrar">&times;</span>
+                        <h2>Carrito de Compras</h2>
+                        <div id="contenidoCarrito"></div>
+                    </div>
+                </div>
+                <button id="vaciarCarritoBtn">Vaciar Carrito</button>
+            </div>
+        </section>
+        <!-- Total a pagar -->
+        <h2>Total a Pagar: <span id="total">$0.00</span></h2>
+
+        <!-- Botones -->
+        <button id="enviarPedidoBtn">Enviar Pedido</button>
+        <button><a href="Index.html">Inicio</a></button>
+
+        <!-- Mensaje de confirmación -->
+        <p id="mensaje"></p>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script src="./JS/script.js"></script> <!-- Enlaza el archivo JavaScript -->
+</body>
+</html>

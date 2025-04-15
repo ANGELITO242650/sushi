@@ -1,0 +1,248 @@
+/* Aplica estilos generales al cuerpo de la página y al elemento HTML */
+body, html {
+    height: 100%; /* Ajusta la altura para que ocupe toda la ventana */
+    margin: 0; /* Elimina el margen */
+    font-family: Arial, Helvetica, sans-serif; /* Establece una fuente  */
+    background-color: antiquewhite; /* Establece un color de fondo */
+}
+.encabezadofijo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+}
+.hero-imagen {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../IMGS/sushiEncabezado.jpg");
+    /* Combina un degradado semitransparente con una imagen de fondo */
+    max-width: 100%;
+    height: 15em; /* Define la altura como el 70% de la pantalla */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Ajusta la imagen para que cubra toda el área */
+    position: relative; /* Permite posicionar elementos dentro del contenedor */
+}
+/* Estilos para el texto dentro de la sección hero */
+.hero-texto {
+    text-align: center; /* Centra horizontalmente el texto */
+    color: white; /* Color del texto */
+    position: absolute; /* Posiciona el texto en relación al contenedor */
+    top: 20%; /* Ubica el texto a 20% desde arriba */
+    left: 50%; /* Centra horizontalmente el texto */
+    transform: translate(-50%, -50%); /* Ajusta el texto para centrarlo completamente */
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 30px;
+}
+
+.navbar .logo {
+    color: #ffcc00;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+}
+
+.btn-pedido {
+    background-color: #ffcc00;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-pedido:hover {
+    background-color: #e6b800;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* CONTENEDOR PARA IMAGEN Y MENÚ DE NAVEGACIÓN */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+/* MENÚ DE NAVEGACIÓN ALINEADO A LA DERECHA */
+.texto-superior-derecha {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 16px;
+}
+
+.texto-superior-derecha a {
+    color: rgb(119, 119, 119);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.texto-superior-derecha a:hover {
+    text-decoration: underline;
+}
+
+/* ESPACIO PARA EVITAR QUE EL CONTENIDO QUEDE OCULTO */
+.content {
+    padding-top: 100px;
+}
+
+/* CONTENEDOR DE LA IMAGEN */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* IMAGEN */
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* CUADRO DE TEXTO VERDE */
+.cuadroverde {
+    position: absolute;
+    bottom: -3px;
+    right: 300px;
+    background-color: #46CBA3;
+    color: white;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 13px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* CUADRO DE TEXTO FONDO GRIS */
+.cuadrogris {
+    background-color: #4A4A4A;
+    padding: 5px;
+    text-align: left;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: -10px;
+    padding-left: 150px; /* Mueve el texto más a la derecha */
+    line-height: 1.6; /* Aumenta el espaciado entre renglones */
+    width: 100%;
+}
+
+/* IMAGEN DE FONDO */
+body img[src="fondolineas.jpg"] {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 530px; /* Mantiene la relación de aspecto */
+    display: block; /* Elimina el espacio inferior */
+    margin: 0; /* Elimina cualquier margen */
+    padding: 0; /* Elimina cualquier relleno */
+}
+/* Contenedor de la imagen de fondo */
+.image-background {
+    position: relative;
+}
+
+/* Imagen de fondo */
+.image-background img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contenedor para las imágenes dentro de la imagen de fondo */
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas para las imágenes */
+    gap: 20px;
+}
+
+/* Estilo para cada imagen dentro de la cuadrícula */
+.image-item {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco con transparencia */
+    padding: 10px;
+    text-align: left;
+    border-radius: 8px;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    max-height: 200px; /* Limita la altura de las imágenes */
+}
+
+.image-item h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.image-item p {
+    font-size: 14px;
+    color: #333;
+}
+
+.image-item a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #202020;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.image-item a:hover {
+    text-decoration: underline;
+}
+
+h3 {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 13px;
+    color: grey;
+    
+}
+h4 {
+    font-family: "Century Gothic", sans-serif;
+    font-size: 15px;
+    color: grey;
+    
+}

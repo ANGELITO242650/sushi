@@ -1,0 +1,258 @@
+/* Estilos generales */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(90deg, #222, #444);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    z-index: 1000;
+    height: 70px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.navbar .logo img {
+    width: 80px;
+    height: auto;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #31363F;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffcc00;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-3px);
+}
+.logo img {
+    height: 50px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+#nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Encabezado */
+.imagen-encabezado {
+    margin: 0; /* separa el contenido del navbar fijo */
+    width: 100vw;
+    height: 110vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.imagen-encabezado img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Botón "Mira nuestra historia" */
+.cuadro-historia {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #46CBA3;
+    color: white;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    z-index: 2;
+}
+.informacion {
+    padding: 20px;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+/* Sección gris de información */
+.sección-gris {
+    background-color: #424242;
+    padding: 40px 20px;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: left;
+    border-radius: 10px;
+    margin: 40px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+/* Artículos */
+.imagen-fondo {
+    position: relative;
+    z-index: 1;
+}
+
+.imagen-fondo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.imagen-articulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.articulos {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.imagen-articulo img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-articulo img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-articulo h3, h4 {
+    color: grey;
+    margin: 10px 0;
+}
+
+.imagen-articulo a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #202020;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.imagen-articulo a:hover {
+    text-decoration: underline;
+}
+
+/* Pie de página */
+.pie-pagina {
+    background-color: #424242;
+    padding: 40px 20px;
+    font-family: "Century Gothic", sans-serif;
+    color: #cacaca;
+    line-height: 1.6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenido-pie-pagina {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor-video iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Redes sociales */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #424242;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.redes-sociales img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s ease;
+}
+
+.redes-sociales img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+/* ======= MEDIA QUERIES ======= */
+ /* Responsive */
+ @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+    }
+
+    #nav-links.show {
+        display: flex;
+    }
+}
